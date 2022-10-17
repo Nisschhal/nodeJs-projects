@@ -1,0 +1,5 @@
+2022-10-17	09:02:03	f217c3fb-f744-486b-bb08-59d3489734da	Windows 10 Home	Error: Not allowed by CORS
+2022-10-17	09:02:53	1631bb29-5cb9-44dc-a947-6a664ee51214	Windows 10 Home	Error: Not allowed by CORS
+2022-10-17	09:09:45	29130cc9-55ae-4c57-bba1-f743abc25c7c	Windows 10 Home	Error: Not allowed by CORS
+2022-10-17	09:10:02	4383766c-3f44-4d32-85d7-80e9e12368aa	Windows 10 Home	TypeError: req.accept is not a function
+2022-10-17	09:10:04	e0a0edb4-b3e2-4980-8ec0-4c5f4fa0fd94	Windows 10 Home	TypeError: req.accept is not a function
