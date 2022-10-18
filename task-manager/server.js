@@ -92,8 +92,9 @@ const EventEmitter = require("events");
 const cors = require("cors");
 const { logger, logEvent } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
+const corsOptions = require("./configs/corsOptions");
 const PORT = process.env.PORT || 3500;
-
+const verifyJWT = require("./middleware/verifyJWT");
 class MyEmmitter extends EventEmitter {}
 
 const myEventEmitter = new MyEmmitter();
@@ -114,35 +115,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // third party middleware to handle error such as cors();
-// accepted site/links to access this backend server
-const whiteList = [
-  "https://www.mysite.com",
-  "http://localhost:3000",
-  "http://localhost:3500",
-];
 
-// analysing and showing error if the cors origin is not on the whitelist
-const corsOptions = {
-  origin: (origin, callback) => {
-    if (whiteList.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-};
 app.use(cors(corsOptions));
 //to get the public, server static files
 app.use(express.static(path.join(__dirname, "/public")));
 
-app.use("^/$|/index(.html)?", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "index.html"));
-});
-
-// redirected to new page
-app.use("/old-page(.html)?", (req, res) => {
-  res.redirect("/index.html");
-});
+// root routes
+app.use("/", require("./routes/root"));
+app.use("/register", require("./routes/api/user"));
+app.use("/login", require("./routes/auth"));
+app.use(verifyJWT);
+app.use("/employees", require("./routes/api/employee"));
 
 // to handle unknown url requests
 app.use("*", (req, res) => {

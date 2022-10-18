@@ -1,5 +1,7 @@
-2022-10-17	09:02:03	f217c3fb-f744-486b-bb08-59d3489734da	Windows 10 Home	Error: Not allowed by CORS
-2022-10-17	09:02:53	1631bb29-5cb9-44dc-a947-6a664ee51214	Windows 10 Home	Error: Not allowed by CORS
-2022-10-17	09:09:45	29130cc9-55ae-4c57-bba1-f743abc25c7c	Windows 10 Home	Error: Not allowed by CORS
-2022-10-17	09:10:02	4383766c-3f44-4d32-85d7-80e9e12368aa	Windows 10 Home	TypeError: req.accept is not a function
-2022-10-17	09:10:04	e0a0edb4-b3e2-4980-8ec0-4c5f4fa0fd94	Windows 10 Home	TypeError: req.accept is not a function
+2022-10-18	18:07:28	bdf41fea-846b-40b9-9a25-7b02d818c4a0	Windows 10 Home	ReferenceError: authorization is not defined
+2022-10-18	18:07:32	4b5dc8da-50b7-4394-9607-ab053549e81e	Windows 10 Home	ReferenceError: authorization is not defined
+2022-10-18	18:08:18	1c6a1cf3-a0f7-48cc-b127-35cbad39c679	Windows 10 Home	ReferenceError: authorization is not defined
+2022-10-18	18:09:00	5f3bef1e-5ac5-49cc-bcd6-eca60ca739e0	Windows 10 Home	ReferenceError: authorization is not defined
+2022-10-18	18:09:22	6ac2e105-32ce-4874-b5cf-78e7a4ed9d83	Windows 10 Home	ReferenceError: authorization is not defined
+2022-10-18	18:14:28	37df1af6-cb4f-4e50-ab4b-5a5786bb5c2c	Windows 10 Home	ReferenceError: authorization is not defined
+2022-10-18	18:14:42	1e4cf838-52d5-4325-919e-20fd65850fb2	Windows 10 Home	ReferenceError: authorization is not defined
